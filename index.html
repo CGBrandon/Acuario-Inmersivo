@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Acuario Inmersivo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0b0d17;
+            color: #ffffff;
+        }
+
+        .header-bg {
+            background-image: url('/arrecife.gif');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .exhibit-card {
+            background-color: #1a1c2c;
+        }
+
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 50;
+        }
+
+        .modal-content {
+            background-color: #1a1c2c;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .modal img {
+            max-width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class=" header-bg text-center py-20 relative overflow-hidden">
+        <video autoplay muted loop id="background-video" class="absolute top-0 left-0 w-full h-full object-cover z-0">
+            <source src="fondo.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+        </video>
+        <div class="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center bg-black bg-opacity-50">
+         <div class="text-left absolute top-10 left-10">
+          <h1 class="text-5xl font-bold text-blue-400">
+           AcuARio
+          </h1>
+          <p class="text-lg">
+           Tu Destino Marino
+          </p>
+         </div>
+         <div class="text-center">
+          <h1 class="text-6xl font-bold">
+           BIENVENIDO AL ACUARIO
+          </h1>
+          <h2 class="text-3xl mt-4">
+           EXPERIENCIA INMERSIVA
+          </h2>
+          <p class="mt-4 text-lg max-w-2xl">
+           Sumérgete en un mundo submarino como nunca antes. Explora la belleza de la vida marina a través de experiencias interactivas y realidad aumentada. Conéctate con otros amantes del océano y empieza tu aventura acuática hoy mismo. ¡Te esperamos!
+          </p>
+         </div>
+        </div>
+    </header>
+    <section class="py-20">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-10">PRÓXIMAS EXHIBICIONES:</h2>
+
+            <!-- Tarjeta de Tiburones -->
+            <div class="flex justify-center mb-6 c">
+                <div class="card bg-[#252a4a] rounded-lg shadow-lg p-6 flex flex-col md:flex-row items-center gap-6 w-full md:w-2/3">
+                    <img alt="Exhibición de Tiburones" class="rounded-lg w-full md:w-1/3 h-auto object-cover cursor-pointer" src="tiburon.png" onclick="abrirModalQR('Tiburon-QR_Code.png')" />
+                    <div class="text-start md:w-2/3">
+                        <h3 class="text-2xl font-bold mb-2">TIBURONES</h3>
+                        <p class="text-gray-300 mb-4">¿Sabías que los tiburones pueden detectar una gota de sangre en un millón de gotas de agua? ¡Son verdaderos cazadores!</p>
+                        <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded" onclick="abrirModalQR('Tiburon-QR_Code.png')">Escanear QR</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta de Ballenas -->
+            <div class="flex justify-center mb-6">
+                <div class="card bg-[#252a4a] rounded-lg shadow-lg p-6 flex flex-col md:flex-row items-center gap-6 w-full md:w-2/3">
+                    <img alt="Exhibición de Ballenas" class="rounded-lg w-full md:w-1/3 h-auto object-cover cursor-pointer" src="ballena.png" onclick="abrirModalQR('Ballena-QR_Code.png')" />
+                    <div class="text-start md:w-2/3">
+                        <h3 class="text-2xl font-bold mb-2">BALLENAS</h3>
+                        <p class="text-gray-300 mb-4">¿Sabías que algunas ballenas pueden cantar durante horas y que sus canciones pueden ser escuchadas a cientos de kilómetros de distancia?</p>
+                        <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded" onclick="abrirModalQR('Ballena-QR_Code.png')">Escanear QR</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta de Delfines -->
+            <div class="flex justify-center mb-6">
+                <div class="card bg-[#252a4a] rounded-lg shadow-lg p-6 flex flex-col md:flex-row items-center gap-6 w-full md:w-2/3">
+                    <img alt="Exhibición de Delfines" class="rounded-lg w-full md:w-1/3 h-auto object-cover cursor-pointer" src="delfin.png" onclick="abrirModalQR('Delfin-QR_Code.png')" />
+                    <div class="text-start md:w-2/3">
+                        <h3 class="text-2xl font-bold mb-2">DELFINES</h3>
+                        <p class="text-gray-300 mb-4">¿Sabías que los delfines son capaces de reconocer su propio reflejo en un espejo? Esto demuestra su inteligencia y autoconciencia.</p>
+                        <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded" onclick="abrirModalQR('Delfín-QR_Code.png')">Escanear QR</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta de Tortugas -->
+            <div class="flex justify-center">
+                <div class="card bg-[#252a4a] rounded-lg shadow-lg p-6 flex flex-col md:flex-row items-center gap-6 w-full md:w-2/3">
+                    <img alt="Exhibición de Tortugas" class="rounded-lg w-full md:w-1/3 h-auto object-cover cursor-pointer" src="tortuga.png" onclick="abrirModalQR('Tortuga-QR_Code.png')" />
+                    <div class="text-start md:w-2/3">
+                        <h3 class="text-2xl font-bold mb-2">TORTUGAS</h3>
+                        <p class="text-gray-300 mb-4">¿Sabías que algunas tortugas pueden vivir más de 100 años? ¡Son uno de los animales más longevos del océano!</p>
+                        <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded" onclick="abrirModalQR('Tortuga-QR_Code.png')">Escanear QR</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="qr-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h3 class="text-2xl font-bold mb-4">Escanea el código QR para más información</h3>
+            <img id="qr-code-image" src="" alt="QR Code">
+            <button class="mt-4 bg-red-600 text-white px-4 py-2 rounded" onclick="cerrarModalQR()">Cerrar</button>
+        </div>
+    </div>
+
+    <script>
+        function abrirModalQR(qrCode) {
+            document.getElementById("qr-code-image").src = qrCode; // Cambiar la fuente de la imagen QR
+            document.getElementById("qr-modal").style.display = "flex";
+        }
+
+        function cerrarModalQR() {
+            document.getElementById("qr-modal").style.display = "none";
+        }
+    </script>
+<footer class="bg-gray-800 text-white text-center py-4 mt-10">
+    <p>&copy; 2024 Acuario Inmersivo. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+
+</html>
