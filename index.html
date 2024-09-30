@@ -57,7 +57,7 @@
 <body>
     <header class=" header-bg text-center py-20 relative overflow-hidden">
         <video autoplay muted loop id="background-video" class="absolute top-0 left-0 w-full h-full object-cover z-0">
-            <source src="fondo.mp4" type="video/mp4">
+            <source src="video.mp4" type="video/mp4">
             Tu navegador no soporta el video.
         </video>
         <div
@@ -264,13 +264,25 @@
     </section>
 
     <!-- Modal -->
-    <div id="qr-modal" class="modal" style="display: none;">
-        <div class="modal-content">
-            <h3 class="text-2xl font-bold mb-4">Escanea el código QR para ver la experiencia</h3>
-            <img id="qr-code-image" src="" alt="QR Code">
-            <button class="mt-4 bg-red-600 text-white px-4 py-2 rounded" onclick="cerrarModalQR()">Cerrar</button>
+    <div id="qr-modal" class="modal" style="display: flex; justify-content: center; align-items: center;">
+        <div class="modal-content" style="width: 700px; padding: 20px; display: flex; flex-direction: column;">
+            <div style="display: flex; flex-direction: row; gap: 20px;">
+                <!-- Lado izquierdo: QR -->
+                <div style="flex: 1; display: flex; justify-content: center;">
+                    <img id="qr-code-image" src="" alt="QR Code" style="max-width: 250px;">
+                </div>
+                
+                <!-- Lado derecho: Texto -->
+                <div style="flex: 2; display: flex; flex-direction: column; justify-content: center;">
+                    <h3 class="text-2xl font-bold mb-4 text-center">¡Tu viaje submarino comienza aquí! Escanea el QR y descubre lo increíble.</h3>
+                </div>
+            </div>
+            <!-- Botón abajo -->
+            <button class="mt-4 bg-red-600 text-white px-4 py-2 rounded self-center" onclick="cerrarModalQR()">Cerrar</button>
         </div>
     </div>
+    
+    
 
     <script>
         function abrirModalQR(qrCode) {
