@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <link rel="stylesheet" href="styles.css">
-     <link rel="icon" href="/pez_cirujanoI.png" type="image/x-icon">
+    <link rel="icon" href="/pez_cirujanoI.png" type="image/x-icon">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
     <style>
@@ -118,10 +118,12 @@
                         <p class="text-gray-300 mb-4">¿Sabías que algunas ballenas pueden cantar durante horas y que sus
                             canciones pueden ser escuchadas a cientos de kilómetros de distancia?</p>
                         <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded"
-                            onclick="abrirModalQR('Ballena-QR_Code.png')">Escanear QR</button>
+                            onclick="abrirModalQR('ballena.jpg')">Escanear QR</button>
                     </div>
                 </div>
             </div>
+
+
 
             <!-- Tarjeta de Delfines -->
             <div class="flex justify-center mb-6">
@@ -152,27 +154,29 @@
                         <p class="text-gray-300 mb-4">¿Sabías que algunas tortugas pueden vivir más de 100 años? ¡Son
                             uno de los animales más longevos del océano!</p>
                         <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded"
-                            onclick="abrirModalQR('Tortuga-QR_Code.png')">Escanear QR</button>
+                            onclick="abrirModalQR('tortuga.jpg')">Escanear QR</button>
                     </div>
                 </div>
             </div>
 
-            <!-- Tarjeta de Tiburón Ballena -->
+            <!-- Tarjeta de Medusas -->
             <div class="flex justify-center mb-6">
                 <div
                     class="card bg-[#252a4a] rounded-lg shadow-lg p-6 flex flex-col md:flex-row items-center gap-6 w-full md:w-2/3">
-                    <img alt="Exhibición de Tiburón Ballena"
-                        class="rounded-lg w-full md:w-1/3 h-auto object-cover cursor-pointer" src="tiburon_ballena.png"
-                        onclick="abrirModalQR('TiburonBallena-QR_Code.png')" />
+                    <img alt="Exhibición de Medusa"
+                        class="rounded-lg w-full md:w-1/3 h-auto object-cover cursor-pointer" src="medusa.png"
+                        onclick="abrirModalQR('Medusa-QR_Code.png')" />
                     <div class="text-start md:w-2/3">
-                        <h3 class="text-2xl font-bold mb-2">TIBURÓN BALLENA</h3>
-                        <p class="text-gray-300 mb-4">El tiburón ballena es el pez más grande del mundo, alcanzando
-                            hasta 12 metros de longitud. ¡Son gigantes gentiles del océano!</p>
+                        <h3 class="text-2xl font-bold mb-2">MEDUSA</h3>
+                        <p class="text-gray-300 mb-4">Las medusas son criaturas fascinantes con cuerpos transparentes y
+                            tentáculos que pueden producir picaduras. Algunas especies brillan en la oscuridad con
+                            bioluminiscencia.</p>
                         <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded"
-                            onclick="abrirModalQR('TiburonBallena-QR_Code.png')">Escanear QR</button>
+                            onclick="abrirModalQR('medusas.jpg')">Escanear QR</button>
                     </div>
                 </div>
             </div>
+
 
             <!-- Tarjeta de Cangrejo -->
             <div class="flex justify-center mb-6">
@@ -186,7 +190,7 @@
                         <p class="text-gray-300 mb-4">¿Sabías que los cangrejos pueden regenerar sus pinzas si las
                             pierden? Son maestros de la supervivencia.</p>
                         <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded"
-                            onclick="abrirModalQR('Cangrejo-QR_Code.png')">Escanear QR</button>
+                            onclick="abrirModalQR('cangrejos.jpg')">Escanear QR</button>
                     </div>
                 </div>
             </div>
@@ -203,7 +207,7 @@
                         <p class="text-gray-300 mb-4">El pulpo es conocido por su inteligencia excepcional, capaz de
                             resolver problemas complejos y abrir frascos.</p>
                         <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded"
-                            onclick="abrirModalQR('Pulpo-QR_Code.png')">Escanear QR</button>
+                            onclick="abrirModalQR('pulpo.jpg')">Escanear QR</button>
                     </div>
                 </div>
             </div>
@@ -220,24 +224,44 @@
                         <p class="text-gray-300 mb-4">La estrella de mar tiene la increíble capacidad de regenerar sus
                             brazos si los pierde, ¡incluso puede regenerar todo su cuerpo a partir de un solo brazo!</p>
                         <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded"
-                            onclick="abrirModalQR('EstrellaMar-QR_Code.png')">Escanear QR</button>
+                            onclick="abrirModalQR('estrelladeMar.jpg')">Escanear QR</button>
                     </div>
                 </div>
             </div>
 
-            <!-- Tarjeta de Pez Cirujano -->
+            <!-- Tarjeta de Beluga -->
             <div class="flex justify-center mb-6">
                 <div
                     class="card bg-[#252a4a] rounded-lg shadow-lg p-6 flex flex-col md:flex-row items-center gap-6 w-full md:w-2/3">
-                    <img alt="Exhibición de Pez Cirujano"
-                        class="rounded-lg w-full md:w-1/3 h-auto object-cover cursor-pointer" src="pez_cirujano.png"
-                        onclick="abrirModalQR('PezCirujano-QR_Code.png')" />
+                    <img alt="Exhibición de Beluga"
+                        class="rounded-lg w-full md:w-1/3 h-auto object-cover cursor-pointer" src="beluga.png"
+                        onclick="abrirModalQR('Beluga-QR_Code.png')" />
                     <div class="text-start md:w-2/3">
-                        <h3 class="text-2xl font-bold mb-2">PEZ CIRUJANO</h3>
-                        <p class="text-gray-300 mb-4">El pez cirujano azul es conocido por su brillante color azul y
-                            amarillo, y su velocidad para escapar de depredadores.</p>
+                        <h3 class="text-2xl font-bold mb-2">BELUGA</h3>
+                        <p class="text-gray-300 mb-4">La beluga es un cetáceo ártico de color blanco distintivo,
+                            conocido por su
+                            sociabilidad y su capacidad para producir una variedad de sonidos.</p>
                         <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded"
-                            onclick="abrirModalQR('PezCirujano-QR_Code.png')">Escanear QR</button>
+                            onclick="abrirModalQR('BelugaQR.png')">Escanear QR</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Tarjeta de Pingüino -->
+            <div class="flex justify-center mb-6">
+                <div
+                    class="card bg-[#252a4a] rounded-lg shadow-lg p-6 flex flex-col md:flex-row items-center gap-6 w-full md:w-2/3">
+                    <img alt="Exhibición de Pingüino"
+                        class="rounded-lg w-full md:w-1/3 h-auto object-cover cursor-pointer" src="pinguino.png"
+                        onclick="abrirModalQR('Pinguino-QR_Code.png')" />
+                    <div class="text-start md:w-2/3">
+                        <h3 class="text-2xl font-bold mb-2">PINGÜINO</h3>
+                        <p class="text-gray-300 mb-4">El pingüino es un ave acuática no voladora que vive en climas
+                            fríos. Son conocidos por su
+                            habilidad para nadar y su vida en colonias masivas.</p>
+                        <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded"
+                            onclick="abrirModalQR('Pinguino.jpg')">Escanear QR</button>
                     </div>
                 </div>
             </div>
@@ -251,40 +275,62 @@
                         onclick="abrirModalQR('PezPayaso-QR_Code.png')" />
                     <div class="text-start md:w-2/3">
                         <h3 class="text-2xl font-bold mb-2">PEZ PAYASO</h3>
-                        <p class="text-gray-300 mb-4">El pez payaso es famoso por su simbiosis con las anémonas, donde
-                            encuentra refugio y protección contra depredadores.</p>
+                        <p class="text-gray-300 mb-4">El pez payaso es conocido por su relación simbiótica con las
+                            anémonas de mar, donde encuentra refugio y protección contra depredadores.</p>
                         <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded"
-                            onclick="abrirModalQR('PezPayaso-QR_Code.png')">Escanear QR</button>
+                            onclick="abrirModalQR('PezPayaso.png')">Escanear QR</button>
                     </div>
                 </div>
             </div>
+
+            <!-- Tarjeta de Pez Koi -->
+            <div class="flex justify-center mb-6">
+                <div
+                    class="card bg-[#252a4a] rounded-lg shadow-lg p-6 flex flex-col md:flex-row items-center gap-6 w-full md:w-2/3">
+                    <img alt="Exhibición de Pez Koi"
+                        class="rounded-lg w-full md:w-1/3 h-auto object-cover cursor-pointer" src="kioi.png"
+                        onclick="abrirModalQR('PezKoi-QR_Code.png')" />
+                    <div class="text-start md:w-2/3">
+                        <h3 class="text-2xl font-bold mb-2">PEZ KOI</h3>
+                        <p class="text-gray-300 mb-4">El pez Koi es famoso por su longevidad y belleza. Este pez
+                            ornamental japonés simboliza la perseverancia y la buena fortuna.</p>
+                        <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded"
+                            onclick="abrirModalQR('koi.png')">Escanear QR</button>
+                    </div>
+                </div>
+            </div>
+
+
 
 
         </div>
     </section>
 
     <!-- Modal -->
-    <div id="qr-modal" class="modal" style="display: flex; justify-content: center; align-items: center;">
+    <div id="qr-modal" class="modal" style="display: none; justify-content: center; align-items: center;">
         <div class="modal-content" style="width: 700px; padding: 20px; display: flex; flex-direction: column;">
             <div style="display: flex; flex-direction: row; gap: 20px;">
                 <!-- Lado izquierdo: QR -->
                 <div style="flex: 1; display: flex; justify-content: center;">
                     <img id="qr-code-image" src="" alt="QR Code" style="max-width: 250px;">
                 </div>
-                
+
                 <!-- Lado derecho: Texto -->
                 <div style="flex: 2; display: flex; flex-direction: column; justify-content: center;">
-                    <h3 class="text-2xl font-bold mb-4 text-center">¡Tu viaje submarino comienza aquí! Escanea el QR y descubre lo increíble.</h3>
+                    <h3 class="text-2xl font-bold mb-4 text-center">¡Tu viaje submarino comienza aquí! Escanea el QR y
+                        descubre lo increíble.</h3>
                 </div>
             </div>
             <!-- Botón abajo -->
-            <button class="mt-4 bg-red-600 text-white px-4 py-2 rounded self-center" onclick="cerrarModalQR()">Cerrar</button>
+            <button class="mt-4 bg-red-600 text-white px-4 py-2 rounded self-center"
+                onclick="cerrarModalQR()">Cerrar</button>
         </div>
     </div>
-    
-    
+
+
 
     <script>
+
         function abrirModalQR(qrCode) {
             document.getElementById("qr-code-image").src = qrCode; // Cambiar la fuente de la imagen QR
             document.getElementById("qr-modal").style.display = "flex";
